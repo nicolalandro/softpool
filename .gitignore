@@ -1,0 +1,7 @@
+*.pyc
+log
+benchmark/log
+trained_model
+__pycache__
+*/__pycache__
+*/*/__pycache__
