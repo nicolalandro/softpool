@@ -1,0 +1,10 @@
+version: '2.3'
+
+services:
+    gpu:
+        build:
+            context: . 
+            dockerfile: ./GPU-Dockerfile
+        command: 'nvidia-smi'
+        runtime: nvidia
+
