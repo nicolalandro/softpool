@@ -1,4 +1,5 @@
 # Softpool
+This code is a fork of [softpool official code](https://github.com/wangyida/softpool) of the [ECCV 2020 paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480069.pdf).
 
 ## Requirements
 ```
