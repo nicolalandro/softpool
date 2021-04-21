@@ -56,7 +56,8 @@ if __name__ == "__main__":
     ])
     chamfer = ChamferLoss()
 
-    print('chamfer loss torch:', chamfer(x, y))
+    print('chamfer loss torch (cpu):', chamfer(x, y))
+    print('chamfer loss torch (cuda):', chamfer(x.cuda(), y.cuda()))
     
     # import sys   
     # sys.path.append("../distance/chamfer/")
