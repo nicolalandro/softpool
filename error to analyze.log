@@ -1,0 +1,31 @@
+SoftPoolNet train [199: 1810/1810]  cd1: 379.21 cd2: 0.00 cd3: 0.00 cd4: 0.00 cd5: 0.00 cd6: 0.00 cd6: 0.00
+Traceback (most recent call last):
+  File "train.py", line 308, in <module>
+    for i, data in enumerate(dataloader_test, 0):
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 819, in __next__
+    return self._process_data(data)
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 846, in _process_data
+    data.reraise()
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/_utils.py", line 369, in reraise
+    raise self.exc_type(msg)
+OSError: Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 178, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/mint/Barracuda/Models/softpool/dataset.py", line 218, in __getitem__
+    '%s.h5' % model_id), self.dataset)
+  File "/media/mint/Barracuda/Models/softpool/dataset.py", line 121, in read_points
+    fh5 = h5py.File(filename, 'r')
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/h5py/_hl/files.py", line 427, in __init__
+    swmr=swmr)
+  File "/media/mint/Barracuda/Models/softpool/venv/lib/python3.6/site-packages/h5py/_hl/files.py", line 190, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 96, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '/media/wangyida/HDD/database/shapenet/val/partial/03001627/8f217a409c5407ade6fe3612af521500.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+
